@@ -29,20 +29,43 @@ namespace CheckCRC
         {
             string thisTbxName = thisTbx.Name;
             int thisTbxNum = thisTbxName[3] - '0';
-            return _tbxList[thisTbxNum + 1];
+            return (thisTbxNum + 1) == _tbxList.Count ? null : _tbxList[thisTbxNum + 1];
+        }
+
+        private TextBox GetLeftTextBox(TextBox thisTbx)
+        {
+            string thisTbxName = thisTbx.Name;
+            int thisTbxNum = thisTbxName[3] - '0';
+            return (thisTbxNum - 1) < 0 ? null : _tbxList[thisTbxNum - 1];
         }
 
         private void tbx_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBox thisTestBox = (TextBox)sender;
-            if ((e.KeyChar == 8))
+            if ((e.KeyChar == 8))//backSpace
             {
+                if (thisTestBox.Text.Length == 0)
+                {
+                    TextBox leftTextBox = GetLeftTextBox(thisTestBox);
+                    if (leftTextBox != null)
+                    {                    
+                        leftTextBox.Focus();
+                    }
+                }
                 return;
             }
-            if (thisTestBox.Text.Length == 1)
+            if (thisTestBox.Text.Length >= 1)
             {
-                TextBox nextTextBox = GetRightTextBox(thisTestBox);
-                nextTextBox.Focus();
+                TextBox rightTextBox = GetRightTextBox(thisTestBox);
+                if (rightTextBox == null)
+                {
+                    if (thisTestBox.Text.Length == 2)
+                    {
+                        e.Handled = true;
+                    }
+                    return;
+                }
+                rightTextBox.Focus();
             }
             else
             {
@@ -54,6 +77,7 @@ namespace CheckCRC
             }
         }
 
+        #region tbxEvent
         private void tbx0_KeyPress(object sender, KeyPressEventArgs e)
         {
             tbx_KeyPress(sender, e);
@@ -101,23 +125,9 @@ namespace CheckCRC
 
         private void tbx9_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if ((e.KeyChar == 8))
-            {
-                return;
-            }
-            if (tbx9.Text.Length >= 2)
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                if ((e.KeyChar < '0') || ((e.KeyChar > '9') && (e.KeyChar < 'A')) || (e.KeyChar > 'F'))
-                {
-                    e.Handled = true;
-                    MessageBox.Show(@"输入大写十六进制数！！");
-                }
-            }
+            tbx_KeyPress(sender, e);
         }
+        #endregion
 
         private List<byte> CombineInputStr()
         {

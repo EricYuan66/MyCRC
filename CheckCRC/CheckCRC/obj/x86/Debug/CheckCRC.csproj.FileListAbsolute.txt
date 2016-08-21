@@ -6,3 +6,11 @@ c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\D
 c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.exe
 c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.pdb
 C:\Users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.csprojResolveAssemblyReference.cache
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.exe
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.pdb
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\bin\Debug\CheckCRC.exe
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\bin\Debug\CheckCRC.pdb
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.csprojResolveAssemblyReference.cache
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.Form1.resources
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.Properties.Resources.resources
+F:\GitHub\MyCRC\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.csproj.GenerateResource.Cache
