@@ -1,0 +1,8 @@
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\bin\Debug\CheckCRC.exe
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\bin\Debug\CheckCRC.pdb
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.Form1.resources
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.Properties.Resources.resources
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.csproj.GenerateResource.Cache
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.exe
+c:\users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.pdb
+C:\Users\yqn19\documents\visual studio 2010\Projects\CheckCRC\CheckCRC\obj\x86\Debug\CheckCRC.csprojResolveAssemblyReference.cache
