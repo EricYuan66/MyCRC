@@ -42,7 +42,7 @@ namespace CheckCRC
         private void tbx_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBox thisTestBox = (TextBox)sender;
-            if ((e.KeyChar == 8))//backSpace
+            if (e.KeyChar == 8)//backSpace
             {
                 if (thisTestBox.Text.Length == 0)
                 {
@@ -54,26 +54,24 @@ namespace CheckCRC
                 }
                 return;
             }
+            if ((e.KeyChar < '0') || ((e.KeyChar > '9') && (e.KeyChar < 'A')) || (e.KeyChar > 'F'))
+            {
+                e.Handled = true;
+                MessageBox.Show(@"输入大写十六进制数！！");
+                return;
+            }
             if (thisTestBox.Text.Length >= 1)
             {
+                if (thisTestBox.Text.Length == 2)
+                {
+                    e.Handled = true;
+                }
                 TextBox rightTextBox = GetRightTextBox(thisTestBox);
                 if (rightTextBox == null)
                 {
-                    if (thisTestBox.Text.Length == 2)
-                    {
-                        e.Handled = true;
-                    }
                     return;
                 }
                 rightTextBox.Focus();
-            }
-            else
-            {
-                if ((e.KeyChar < '0') || ((e.KeyChar > '9') && (e.KeyChar < 'A')) || (e.KeyChar > 'F'))
-                {
-                    e.Handled = true;
-                    MessageBox.Show(@"输入大写十六进制数！！");
-                }
             }
         }
 
@@ -155,7 +153,7 @@ namespace CheckCRC
                 charArray[0].ToString().ToUpper() + charArray[1].ToString().ToUpper();
         }
 
-        private byte HexstrToint(string str)
+        private static byte HexstrToint(string str)
         {
             byte hexH = 0;
             byte hexL = 0;
